@@ -4,30 +4,38 @@
 <head>
     <title>Polishchuk 2P</title>
     <script language="JavaScript">
-        function WinOpen_z3_polishchuk() {
-            window.open("z3_kow.html", "okienko_z3", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+        function WinOpen_polishchuk_z1() {
+            window.open("z1_poli.html", "okienko_z1", "toolbar=no,directories=no,menubar=no,height=300,width=300,top=600,left=600");
         }
-        function WinOpen_z4_polishchuk() {
-            window.open("z4_kow.html", "okienko_z4", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
+        function WinOpen_polishchuk_z2() {
+            window.open("z2_poli.html", "okienko_z2", "toolbar=no,directories=no,menubar=no,height=300,width=300,top=600,left=600");
         }
-        function okno_zamknij_polishchuk() {
+        function WinOpen_polishchuk_z3() {
+            window.open("z3_poli.html", "okienko_z3", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=600,left=600");
+        }
+        function WinOpen_polishchuk_z4() {
+            window.open("z4_poli.html", "okienko_z4", "toolbar=no,directories=no,menubar=no,height=1280,width=1080,top=600,left=600");
+        }
+        function WinOpen_polishchuk_z5() {
+            window.open("z5_poli.html", "okienko_z5", "toolbar=no,directories=no,menubar=no,height=400,width=1080,top=580,left=570");
+        }
+        function okno_zamknij() {
             window.close()
         } 
     </script>
-    <style>
-        h1 {
-            color: red;
-            font-size: 2cm;
-        }
-    </style>
 </head>
 
 <body>
-    <h1>Szkielet zaliczeniowy JavaScript Mykhailo Polishchuk klasa 2P</h1>
+    <script>
+        document.write("<span style='font-size: 2cm;color: red;'>Szkielet zaliczeniowy JavaScript wykonal: Polishchuk Mykhailo 2P<br></span>");
+    </script>
     <form>
-        <input type="button_z3" name="zadanie3" value="zadanie3-polishchuk" onclick="WinOpen_z3_polishchuk(' ')">
-        <input type="button_z4" name="zadanie4" value="zadanie4-polishchuk" onclick="WinOpen_z4_polishchuk(' ')">
-        <input type="button" value="zamknij okno" onclick="okno_zamknij_polishchuk()" />
+        <input type="button_z1" name="zadanie1" value="zadanie1-polishchuk" onclick="WinOpen_polishchuk_z1(' ')">
+        <input type="button_z2" name="zadanie2" value="zadanie2-polishchuk" onclick="WinOpen_polishchuk_z2(' ')">
+        <input type="button_z3" name="zadanie3" value="zadanie3-polishchuk" onclick="WinOpen_polishchuk_z3(' ')">
+        <input type="button_z4" name="zadanie4" value="zadanie4-polishchuk" onclick="WinOpen_polishchuk_z4(' ')">
+        <input type="button_z5" name="zadanie5" value="zadanie5-polishchuk" onclick="WinOpen_polishchuk_z5(' ')">
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()" />
     </form>
 </body>
 

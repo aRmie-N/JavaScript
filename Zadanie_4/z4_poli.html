@@ -1,102 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zadanie 4 Polishchuk 2P</title>
-    <style>
-        p,
-        li {
-            font-size: 20px;
-        }
-    </style>
+    <title>Odpowiedzi_Spitsarev - JavaScript</title>
+    <script type="text/javascript"> 
+                 function okno_zamknij_spitsarev()  
+                       { 
+                             window.close() 
+                       } 
+            </script> 
 </head>
-
 <body>
-    <h2>1) Kiedy powstał JavaScript (podaj datę)?</h2>
-    <p>w 1995 roku</p>
 
-    <h2>2) Dlaczego jest to język skryptowy?</h2>
-    <p>Ponieważ nie musi zostać skompilowany do kodu maszynowego, aby można było zobaczyć efekty
-        jego działania.</p>
+    <p><strong>1) kiedy powstał JavaScript (podaj datę).</strong></p>
+    <p><strong>4 grudnia 1995 roku</strong> (prace nad językiem pod nazwą Mocha rozpoczęły się w maju 1995 r.).</p>
 
-    <h2>3) Gdzie jest wykonywany JS (klient lub serwer)?</h2>
-    <p>Może być wykonywany zarówno po stronie klienta w przeglądarce, jak i po stronie serwera.</p>
+    <p><strong>2) dlaczego jest to język skryptowy</strong></p>
+    <p>Ponieważ nie wymaga wcześniejszego procesu kompilacji do pliku wykonywalnego – kod jest interpretowany i wykonywany bezpośrednio przez silnik w środowisku uruchomieniowym (np. w przeglądarce).</p>
 
-    <h2>4) Dlaczego jest JS to bezpieczne narzędzie?</h2>
-    <ul>
-        <li>Bezpieczeństwo kodu</li>
-        <li>Interaktywność bez ryzyka</li>
-        <li>Zarządzanie cookies i analiza</li>
-        <li>Personalizacja treści</li>
-    </ul>
+    <p><strong>3) gdzie jest wykonywany JS (klient lub serwer)</strong></p>
+    <p>Zarówno po stronie <strong>klienta</strong> (w przeglądarce internetowej), jak i po stronie <strong>serwera</strong> (za pomocą środowisk takich jak Node.js).</p>
 
-    <h2>5) Czy jest to język obiektowy, jeśli tak to dlaczego?</h2>
-    <p>Javascript jest językiem programowania obiektowego ponieważ wykorzystuje definicje obiektów,
-        metod, zdarzeń, które mogą być zastosowane do opisu właściwości obiektów.</p>
+    <p><strong>4) dlaczego jest JS to bezpieczne narzędzie</strong></p>
 
+    <p>Działa w tzw. piaskownicy (sandbox) przeglądarki, co ogranicza jego dostęp do lokalnego systemu plików użytkownika, pamięci operacyjnej oraz zasobów sprzętowych bez wyraźnej zgody.</p>
 
-    <h2>6) Wymień zalety JS:</h2>
-    <ol>
-        <li>Największą zaletą JavaScriptu jest <u>niewątpliwie jego prostota</u>. Język ten uważa się więc za <br>
-            relatywnie łatwy do opanowania i rzeczywiście – nic nie stoi na przeszkodzie, aby zacząć używać go<br>
-            już po kilku minutach od rozpoczęcia nauki.</li><br>
-        <li>Ponieważ jest to obecnie najbardziej rozpowszechniony język skryptowy, w Internecie można<br>
-            <u>znaleźć miliony praktycznych przykładów</u> – witryn wykorzystujących różnorodne funkcje JavaScriptu.<br>
-        </li><br>
-        <li>O olbrzymiej popularności języka zadecydowały z pewnością jego uniwersalność oraz fakt, iż<br>
-            pozwala on na <u>odciążenie serwerów i ograniczenie ilości zbędnych danych przesyłanych pomiędzy<br>
-                nimi a przeglądarką klienta</u>.</li><br>
-        <li>JavaScript pomaga użytkownikom <u>tworzyć nowoczesne aplikacje internetowe do bezpośredniej
-                interakcji</u><br>
-            bez ponownego ładowania strony za każdym razem.</li><br>
-        <li>Z pomocą <b><u>frameworków</u></b><br>
-            (rodzaj programu do tworzenia innych programów w JS) zostały<br>
-            stworzone znane na całym świecie aplikacje, np. Google używa Angular, a Facebook — React.</li><br>
-        <li>W praktyce developerskiej stosowana jest JavaScript w tworzeniu <b><u>dynamicznej zawartości
-                    witryn</u></b><br>
-            internetowych, aktualizowaniu treści w czasie rzeczywistym, interaktywnych formularzach, różnych<br>
-            animacjach i zaawansowanych funkcjach, które zwiększają wydajność aplikacji internetowej i<br>
-            angażują użytkownika.</li><br>
-        <li>Funkcje i zastosowania JavaScript sprawiają, że jest to potężne narzędzie do tworzenia <b>aplikacji<br>
-                mobilnych.</b> Bardzo popularnym frameworkiem do tworzenia aplikacji jest React Native. Z jego<br>
-            pomocą możemy budować aplikacje mobilne na różne systemy operacyjne (cross-platform apps).<br>
-            Inne popularne front-endowe frameworki to React, Angular i Vue.</li><br>
-        <li>Oprócz witryn i aplikacji, programiści mogą również używać JavaScriptu do <b><u>tworzenia prostych<br>
-                    serwerów internetowych</u></b> i rozwijania infrastruktury zaplecza przy użyciu biblioteki
-            Node.js,<br>
-            który<br>
-            zapewnia środowisko zawierające niezbędne narzędzia wymagane do uruchomienia JS na serwerach.</li><br>
-        <li>JavaScript służy również do <b><u>tworzenia gier przeglądarkowych.</u></b> To świetny sposób dla<br>
-            początkujących programistów na ćwiczenie swoich umiejętności. Posiada różne biblioteki i<br>
-            frameworki do tworzenia gier, takie jak PhysicsJS, Pixi.js. Możemy również użyć WebGL (biblioteki<br>
-            grafiki internetowej), która jest API JS do renderowania obrazów 2D i 3D w przeglądarkach.</li><br>
-        <li><b><u>Responsywność</u></b><br>
-            JavaScript udostępnia metody, których można użyć w aplikacji, aby uzyskać<br>
-            bieżący rozmiar ekranu i wykorzystać wynik do wykonania działań w oparciu o ten rozmiar. Używając<br>
-            CSS i HTML można zmienić rozmiar, ukrywać, zmniejszać, powiększać lub przenosić treści, aby<br>
-            wyglądały dobrze na dowolnym ekranie.</li><br>
-        <li><b><u>AJAX (Asynchronous JavaScript and XML)</u></b><br>
-            AJAX umożliwia nam dynamiczne ściąganie i wysyłanie<br>
-            danych bez potrzeby przeładowania całej strony. W dzisiejszych czasach jest to praktycznie normą.<br>
-            Gdy wchodzisz na Facebooka, przeglądasz sobie profil wczytując kolejne posty, możesz równocześnie<br>
-            pisać komentarz.</li>
-    </ol>
+    <p><strong>5) czy jest to język obiektowy , jeśli tak to dlaczego.</strong></p>
 
-    <h2>Framework to:</h2>
-    <p><b><u>7) Framework</u></b> to struktura oprogramowania lub szkielet, który wspiera tworzenie, rozwijanie i
-        zarządzanie
-        aplikacjami. Obejmuje zestaw narzędzi, bibliotek i reguł, które pozwalają programistom szybciej i sprawniej
-        budować oprogramowanie, eliminując potrzebę pisania wszystkiego od podstaw.
-    </p>
+    <p>Tak, jest to język obiektowy, ponieważ opiera się na obiektach i wykorzystuje dziedziczenie oparte na prototypach (prototype-based OOP), pozwalając na tworzenie, modyfikowanie i tworzenie relacji między obiektami.</p>
 
-    <h2>8) Do aplikacji mobilnych można użyć Framework...</h2>
-    <p>React Native, React, Angular, Vue.</p>
+    <p><strong>6) wymień zalety JS:</strong></p>
+    <p>Zaleta1: <strong>Wszechstronność i uniwersalność</strong> (działa po stronie klienta, serwera oraz w aplikacjach mobilnych).</p>
+    <p>Zaleta2: <strong>Duża wydajność w interfejsach użytkownika</strong> (dynamiczna modyfikacja DOM bez konieczności przeładowywania strony).</p>
+    <p>Zaleta3: <strong>Ogromny ekosystem i społeczność</strong> (bogata biblioteka pakietów npm oraz liczne frameworki).</p>
 
-    <h2>9) Aplikacje responsywne to:</h2>
-    <p>Aplikacje responsywne to aplikacje webowe, które automatycznie dostosowują się do różnych urządzeń i
-        rozdzielczości ekranów, zapewniając użytkownikom spójne i intuicyjne doświadczenie.</p>
+    <p><strong>7) Framework to:</strong></p>
+    <p>Gotowa szkieletowa struktura do tworzenia aplikacji, dostarczająca biblioteki, narzucająca architekturę kodu oraz przyspieszająca proces programowania.</p>
+
+    <p><strong>8) Do aplikacji mobilnych można użyć Framework</strong></p>
+
+    <p><strong>React Native</strong> (lub Ionic, Flutter z JS/TS).</p>
+
+    <p><strong>9) Aplikacje responsywne to:</strong></p>
+    <p>Aplikacje internetowe, których układ i wygląd automatycznie dostosowują się do rozmiaru ekranu urządzenia, na którym są wyświetlane (np. smartfon, tablet, komputer).</p>
+
+    <p><strong>10) Przepisz linie kody pod nimi wytłumaczenie jak działa ten fragment kodu</strong></p>
+    <code>&lt;input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen(' ')"&gt;</code>
+    <p>Wytłumaczenie: Ten fragment kodu tworzy w formularzu HTML przycisk o nazwie "przycisk" i etykiecie "Nowa Strona". Kliknięcie przycisku wywołuje zdarzenie <code>onclick</code>, które uruchamia funkcję JavaScript o nazwie <code>WinOpen(' ')</code> (najczęściej używaną do otwierania nowego okna lub karty w przeglądarce).</p>
+
+    <p><strong>11) Przepisz linie kody pod nimi wytłumaczenie jak działa ten fragment kodu</strong></p>
+
+<code>window.open("obraz.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");</code>
+
+<p><strong>Wytłumaczenie działania linii kodu:</strong></p>
+<p>Ta linia kodu wykorzystuje metodę <code>window.open()</code> języka JavaScript do otwarcia nowego okna przeglądarki o określonych parametrach:</p>
+<ul>
+    <li><code>"obraz.html"</code> – ścieżka do pliku/strony, która zostanie załadowana w nowym oknie.</li>
+    <li><code>"okienko"</code> – wewnętrzna nazwa docelowa dla nowego okna (używana m.in. przez atrybut <code>target</code>).</li>
+    <li><code>"toolbar=no"</code> – ukrywa pasek narzędzi przeglądarki.</li>
+    <li><code>"directories=no"</code> – ukrywa pasek osobisty/zakładek.</li>
+    <li><code>"menubar=no"</code> – ukrywa górne menu przeglądarki (Plik, Edycja itp.).</li>
+    <li><code>"height=280,width=160"</code> – ustawia dokładne wymiary okna: wysokość 280 pikseli i szerokość 160 pikseli.</li>
+    <li><code>"top=200,left=200"</code> – określa pozycję okna na ekranie (200 pikseli od górnej i 200 pikseli od lewej krawędzi monitora).</li>
+</ul>
+    <p><strong>12) Opisz następującą instrukcję window.close()</strong></p>
+
+<p><strong>Wytłumaczenie:</strong></p>
+<p>Instrukcja <code>window.close()</code> służy do zamykania bieżącego okna lub karty przeglądarki. Ze względów bezpieczeństwa współczesne przeglądarki pozwalają tej metodzie zamknąć tylko te okna, które zostały wcześniej otwarte za pomocą kodu JavaScript (np. przy użyciu funkcji <code>window.open()</code>).</p>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_spitsarev()"/> 
 </body>
-
 </html>
