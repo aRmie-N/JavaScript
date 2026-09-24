@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie6_Spitsarev - JavaScript</title>
+    <script type="text/javascript">
+        function okno_zamknij_spitsarev() {
+            window.close()
+        }
+    </script>
+
+</head>
+
+<body>
+    <p><strong>1) Rodzaje okienek.</strong></p>
+    <ul>
+        <li>
+            <strong>Okienko alert</strong> – wyświetla okienko dialogowe z informacją i przyciskiem <strong>OK</strong>.
+        </li>
+
+        <li>
+            <strong>Okienko prompt</strong> – generuje okno, w którym użytkownik może wpisać wartość, zwracaną następnie
+            do
+            programu.
+        </li>
+
+        <li>
+            <strong>Okienko confirm</strong> – służy do tego, aby użytkownik coś potwierdził (stąd nazwa confirm).
+        </li>
+    </ul>
+
+    <p><strong>2) Konwersji liczb.</strong></p>
+
+    <p>
+        Wczytanie zmiennej z użyciem <strong>prompt</strong> wykonywane jest jako ciąg znaków, dlatego konieczna
+        jest
+        <u>konwersja z ciągu znaków na wartości liczbowe</u>, aby wykonywać obliczenia.
+    </p>
+    <ul>
+        <li>
+            <strong>parseFloat(zmienna)</strong> – konwersja zmiennej do typu <strong>float</strong>, czyli liczby
+            zmiennoprzecinkowej.
+        </li>
+
+        <li>
+            <strong>parseInt(zmienna)</strong> – konwersja zmiennej do typu <strong>int</strong>, czyli liczby
+            całkowitej.
+        </li>
+
+        <li>
+            <strong>toString(zmienna)</strong> – konwersja zmiennej do typu <strong>łańcuchowego</strong>, czyli
+            tekstowego.
+        </li>
+    </ul>
+
+    <p><strong>3) Przy nadawaniu nazw zmiennym należy przestrzegać pewnych zasad (trzy zasady).</strong></p>
+
+    <p>
+        <strong>1.</strong> Nazwa zmiennej musi się zaczynać od <strong>litery, znaku "$" lub "_"</strong>.
+        Może zawierać tylko litery (bez polskich znaków), cyfry oraz znaki <strong>"$"</strong> i
+        <strong>"_"</strong>.
+    </p>
+    <ul>
+        <li>
+            <u>Poprawne nazwy zmiennych:</u>
+            <strong>zmienna1, $wynik, _rozmiar, wynik1, Rekord, $_gracz</strong>.
+        </li>
+
+        <li>
+            <u>Błędne nazwy zmiennych:</u>
+            <strong>1zmienna, wynik gry, wysokosc&amp;szerokosc, wynik.rekord, &amp;gracz, wysokość,
+                imie+nazwisko</strong>.
+        </li>
+    </ul>
+    <p>
+        <strong>2.</strong> <u>Wielkość liter ma znaczenie.</u>
+        Na przykład <strong>Rekord</strong> i <strong>rekord</strong> to dwie różne zmienne.
+    </p>
+
+    <p>
+        <strong>3.</strong> Należy <u>nie używać słów kluczowych JavaScript jako nazw zmiennych</u>.
+    </p>
+
+
+    <p><strong>4) Omów typy zmiennych w JavaScript.</strong></p>
+
+    <p>
+        W JavaScript nie ma możliwości definiowania różnych typów zmiennych tak jak w C++.
+        <strong>Typy zmiennych są definiowane w trakcie ich przypisywania.</strong>
+    </p>
+    <ul>
+        <li>
+            <strong>Number</strong> – typ liczbowy, który może przechowywać liczby całkowite oraz zmiennoprzecinkowe.
+        </li>
+
+        <li>
+            <strong>String</strong> – typ tekstowy, służący do przechowywania tekstu.
+        </li>
+
+        <li>
+            <strong>Boolean</strong> – typ logiczny, który może przyjmować wartości <strong>true</strong> lub
+            <strong>false</strong>.
+        </li>
+
+        <li>
+            <strong>Null</strong> – oznacza pustą zawartość, czyli celowy brak wartości.
+        </li>
+
+        <li>
+            <strong>Undefined</strong> – oznacza typ niezidentyfikowany, najczęściej wtedy, gdy zmiennej nie przypisano
+            wartości.
+        </li>
+
+        <li>
+            <strong>Object</strong> – obiekt, który może przechowywać różne dane i właściwości.
+        </li>
+    </ul>
+
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_spitsarev()" />
+</body>
+
+</html>
