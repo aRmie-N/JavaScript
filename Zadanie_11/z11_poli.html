@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -12,10 +12,10 @@
         var D1 = prompt("Dzień 1", "");
         var D2 = prompt("Dzień 2", "");
         var secs = (D1 - D2)*86400;
-        document.writeln("wczytane dane:");
-        document.writeln("Dzień 1: " + D1 + "\n");
-        document.writeln("Dzień 2: " + D2);
-        document.write("ilość sekund = " + secs + "sekund");
+        document.write("wczytane dane:" .fontcolor("green") + "<br>");
+        document.write("Dzień 1: " .fontcolor("green") + D1 + "<br>");
+        document.write("Dzień 2: " .fontcolor("green") + D2 + "<br>");
+        document.write("ilość sekund = " .fontcolor("green") + secs + " sekund" .fontcolor("green"));
     </script>
 </body>
 
