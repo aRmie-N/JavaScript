@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z12 Polishchuk</title>
+</head>
+
+<body>
+    <div style="font-size: 45px; color: green;">
+        <script type="text/javascript">
+            var D1 = prompt("Dzień 1", "");
+            var G1 = prompt("Godzina 1", "");
+            var D2 = prompt("Dzień 2", "");
+            var G2 = prompt("Godzina 2", "");
+            var secsG = (G1 - G2) * 3600;
+            var secs = (D1 - D2) * 86400 + secsG;
+            document.write("wczytane dane:" + "<br>");
+            document.write("Dzień 1: " + D1 + " Godzina 1: "+ G1 + "<br>");
+            document.write("Dzień 2: " + D2 + " Godzina 2: "+ G2 + "<br>");
+            document.write("ilość sekund = " + secs + " sekund");
+        </script>
+    </div>
+</body>
+
+</html>
