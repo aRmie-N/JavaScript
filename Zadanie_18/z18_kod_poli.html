@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod z18</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        pre {
+            background-color: rgb(223, 223, 223);
+            border-radius: 7px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kod do zadania 18</h1>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+
+&lt;head&gt;
+    &lt;title&gt; Użycie fukcji &lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div style="color:navy;font-size:50px;"&gt;
+        &lt;script language="JavaScript"&gt;
+            var a = parseFloat(prompt("a=", ""));
+            var b = parseFloat(prompt("b=", ""));
+            function suma_pol(a, b) {
+                return a + b;
+            }
+            function roznica_pol(a, b) {
+                return a - b;
+            }
+            function kwadrat_pol(a, b) {
+                return a ** 2;
+            }
+            function kwadrat_pol1(a, b) {
+                return b ** 2;
+            }
+            function reszta_pol(a, b) {
+                return a % b;
+            }
+            document.write("suma=" + suma_pol(a, b) + "&lt;br&gt;");
+            document.write("różnica=" + roznica_pol(a, b) + "&lt;br&gt;");
+            document.write("kwadrat a =" + kwadrat_pol(a, b) + "&lt;br&gt;");
+            document.write("kwadrat b =" + kwadrat_pol1(a, b) + "&lt;br&gt;");
+            document.write("reszta z dzielenia=" + reszta_pol(a, b) + "&lt;br&gt;");
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </code></pre>
+</body>
+
+</html>
+<!-- Mykhailo Polishchuk 2P 01.10.2026 -->
+<!-- Zadanie 18 -->

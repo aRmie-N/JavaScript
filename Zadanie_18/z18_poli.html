@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title> Użycie fukcji </title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div style="color:navy;font-size:50px;">
+        <script language="JavaScript">
+            var a = parseFloat(prompt("a=", ""));
+            var b = parseFloat(prompt("b=", ""));
+            function suma_pol(a, b) {
+                return a + b;
+            }
+            function roznica_pol(a, b) {
+                return a - b;
+            }
+            function kwadrat_pol(a, b) {
+                return a ** 2;
+            }
+            function kwadrat_pol1(a, b) {
+                return b ** 2;
+            }
+            function reszta_pol(a, b) {
+                return a % b;
+            }
+            document.write("suma=" + suma_pol(a, b) + "<br>");
+            document.write("różnica=" + roznica_pol(a, b) + "<br>");
+            document.write("kwadrat a =" + kwadrat_pol(a, b) + "<br>");
+            document.write("kwadrat b =" + kwadrat_pol1(a, b) + "<br>");
+            document.write("reszta z dzielenia=" + reszta_pol(a, b) + "<br>");
+        </script>
+    </div>
+</body>
+
+</html>
