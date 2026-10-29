@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod z19</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        pre {
+            background-color: rgb(223, 223, 223);
+            border-radius: 7px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kod do zadania 18</h1>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="stylesheet" href="styl.css"&gt;
+    &lt;script type="text/javascript"&gt;
+        function pole() {
+            var a = parseFloat(document.getElementById('dlugosc').value);
+            var b = a * a;
+            document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b.toFixed(2) + " cm^2";
+        }
+        function obwod() {
+            var a = parseFloat(document.getElementById('dlugosc').value);
+            var b = 4 * a;
+            document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b.toFixed(2) + " cm";
+        } 
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Wszystko o KWADRACIE&lt;/h1&gt;&lt;br&gt;&lt;br&gt;
+    Podaj długość boku: &lt;input type="text" id="dlugosc" value="podaj długość"&gt; cm&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type="button" name="pole" value="Oblicz pole" Onclick="pole()"&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod()"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;div style="color:red;font-size:50px;" id="nazwa"&gt;
+        &lt;script&gt;
+            document.write(pole());
+            document.write(obwod());
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </code></pre>
+</body>
+
+</html>
+<!-- Mykhailo Polishchuk 2P 01.10.2026 -->
+<!-- Zadanie 19 -->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+    <script type="text/javascript">
+        function AB_pol() {
+            var Ax_pol = parseFloat(document.getElementById('Ax').value);
+            var Ay_pol = parseFloat(document.getElementById('Ay').value);
+            var Bx_pol = parseFloat(document.getElementById('Bx').value);
+            var By_pol = parseFloat(document.getElementById('By').value);
+            document.write(Math.sqrt(Math.pow((Ax_pol - Bx_pol), 2) + Math.pow((Ay_pol - By_pol), 2)));
+        }
+        function BC_pol() {
+            var Bx_pol = parseFloat(document.getElementById('Bx').value);
+            var By_pol = parseFloat(document.getElementById('By').value);
+            var Cx_pol = parseFloat(document.getElementById('Cy').value);
+            var Cy_pol = parseFloat(document.getElementById('Cy').value);
+            document.write(Math.sqrt(Math.pow((Bx_pol - Cx_pol), 2) + Math.pow((By_pol - Cy_pol), 2)));
+        }
+        function AC_pol() {
+            var Ax_pol = parseFloat(document.getElementById('Ax').value);
+            var Ay_pol = parseFloat(document.getElementById('Ay').value);
+            var Cx_pol = parseFloat(document.getElementById('Cy').value);
+            var Cy_pol = parseFloat(document.getElementById('Cy').value);
+            document.write(Math.sqrt(Math.pow((Ax_pol - Cx_pol), 2) + Math.pow((Ay_pol - Cy_pol), 2)));
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Trójkąt</h1><br><br>
+    Podaj współrzędne punktu A: <br>
+    <input type="text" id="Ax" value="podaj Ax"><br>
+    <input type="text" id="Ay" value="podaj Ay"><br><br><br>
+
+    Podaj współrzędne punktu B: <br>
+    <input type="text" id="Bx" value="podaj Bx"><br>
+    <input type="text" id="By" value="podaj By"><br><br><br>
+
+    Podaj współrzędne punktu C: <br>
+    <input type="text" id="Cx" value="podaj Cx"><br>
+    <input type="text" id="Cy" value="podaj Cy"><br><br><br>
+
+    <input type="button" name="boki" value="Oblicz wszystkie boki" Onclick="AB_pol()"><br><br>
+
+    <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+
+</html>
