@@ -4,27 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styl.css">
-    <script type="text/javascript">
-        function pole() {
-            var a = parseFloat(document.getElementById('dlugosc').value);
-            var b = a * a;
-            document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b.toFixed(2) + " cm^2";
+    <style>
+        p {
+            color: red;
+            font-size: 50px;
         }
-        function obwod() {
-            var a = parseFloat(document.getElementById('dlugosc').value);
-            var b = 4 * a;
-            document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b.toFixed(2) + " cm";
-        } 
-    </script>
+    </style>
 </head>
 
 <body>
     <h1>Wszystko o KWADRACIE</h1><br><br>
-    Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+    <label for="dlugosc">Podaj długość boku: </label> <input type="text" id="dlugosc" placeholder="podaj długość">cm<br><br><br>
     <input type="button" name="pole" value="Oblicz pole" Onclick="pole()"><br><br>
     <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod()"><br><br>
 
-    <div style="color:red;font-size:50px;" id="nazwa"></div>
+    <p id="nazwa"></p>
+    <script type="text/javascript">
+        function pole() {
+            let a = parseFloat(document.getElementById('dlugosc').value);
+            let b = a * a;
+            document.getElementById("nazwa").textContent = "Pole kwadratu= " + b.toFixed(2) + " cm^2";
+        }
+        function obwod() {
+            let a = parseFloat(document.getElementById('dlugosc').value);
+            let b = 4 * a;
+            document.getElementById("nazwa").textContent = "Obwód kwadratu= " + b.toFixed(2) + " cm";
+        }
+    </script>
 </body>
 
 </html>

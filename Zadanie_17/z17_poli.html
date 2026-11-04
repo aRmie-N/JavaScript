@@ -4,10 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <title>z17_Polishchuk - JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            margin: 20px;
+        }
+
+        h1,
+        h2 {
+            text-decoration: underline;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 12px 0 24px;
+            width: min(100%, 800px);
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        code,
+        pre {
+            background: #f1f1f1;
+        }
+
+        pre {
+            border: 1px solid #888;
+            padding: 12px;
+            overflow-x: auto;
+        }
+    </style>
+    <script>
+        function okno_zamknij() {
+            window.close();
+        }
+    </script>
 </head>
 
 <body>
-    
+    <h2>Zadanie 17</h2>
+    <p><strong>Temat: Zadanie teoretyczne.</strong></p>
+
+    <h3>Odpowiedzi</h3>
+
+    <p><strong><u>1. Wymień cztery sposoby wyprowadzania danych w JS.</u></strong></p>
+    <ul>
+        <li><strong><u>document.write()</u></strong> - wypisuje tekst bezpośrednio w dokumencie HTML.</li>
+        <li><strong><u>window.alert()</u></strong> - wyświetla dane w oknie komunikatu.</li>
+        <li><strong><u>Okienko formularza</u></strong> - pokazuje dane w polu formularza, np. w elemencie <code>input</code>.</li>
+        <li><strong><u>Tabela</u></strong> - umieszcza dane w komórkach tabeli HTML.</li>
+    </ul>
+
+    <p><strong><u>2. Czym jest funkcja w JS? Omów przy użyciu 4 podpunktów.</u></strong></p>
+    <ul>
+        <li><strong><u>Funkcja</u></strong> jest zbiorem uporządkowanych instrukcji, które można uruchomić przez podanie jej nazwy.</li>
+        <li>Po wywołaniu funkcja wykonuje swój wewnętrzny kod.</li>
+        <li>Funkcja może przyjmować argumenty, które są przetwarzane wewnątrz niej.</li>
+        <li>Funkcja może zwracać obliczoną wartość za pomocą słowa kluczowego <strong><u>return</u></strong>.</li>
+    </ul>
+
+    <p><strong><u>3. Omów metody getElementsByName, getElementById, getElementsByTagName.</u></strong></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Metoda</th>
+                <th>Opis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong><code>getElementById("id")</code></strong></td>
+                <td>Zwraca element o konkretnej wartości atrybutu <code>id</code>. Id powinno być unikalne w dokumencie.</td>
+            </tr>
+            <tr>
+                <td><strong><code>getElementsByTagName("znacznik")</code></strong></td>
+                <td>Zwraca kolekcję wszystkich elementów danego typu, np. wszystkich znaczników <code>p</code> albo <code>div</code>.</td>
+            </tr>
+            <tr>
+                <td><strong><code>getElementsByName("nazwa")</code></strong></td>
+                <td>Zwraca kolekcję elementów posiadających określoną wartość atrybutu <code>name</code>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong><u>4. Omów właściwości innerHTML, innerText, className.</u></strong></p>
+    <ul>
+        <li><strong><u>innerHTML</u></strong> pozwala odczytać, zmienić, wstawić albo usunąć kod HTML znajdujący się w elemencie.</li>
+        <li><strong><u>innerText</u></strong> pozwala odczytać lub zmienić sam tekst wyświetlany w elemencie, bez interpretowania znaczników HTML.</li>
+        <li><strong><u>className</u></strong> pozwala odczytać lub zmienić nazwę klasy CSS przypisanej do elementu.</li>
+    </ul>
+
+    <h3>Przykład użycia właściwości elementu</h3>
+    <pre>&lt;div id="nazwa"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+    document.getElementById("nazwa").innerHTML = "Witaj";
+    document.getElementById("nazwa").className = "wyroznienieCzerwone";
+&lt;/script&gt;</pre>
+
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()">
 </body>
 
 </html>

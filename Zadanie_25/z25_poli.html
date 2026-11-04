@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Zadanie 25</title>
+	<style>
+		#wyniki {
+			color: blue;
+			font-size: 32px;
+			line-height: 1.35;
+			padding: 12px;
+			border: 1px solid black;
+			width: fit-content;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wyniki"></div>
+
+	<script>
+		// Autor: Mykhailo Polishchuk
+		let No = parseFloat(prompt("Podaj poczatkowa liczbe atomow No [sztuk]:", "1"));
+		let t = parseFloat(prompt("Podaj czas t [lat]:", "1"));
+		let T1_2 = parseFloat(prompt("Podaj czas polowicznego rozpadu T1/2 [lat]:", "5700"));
+
+		let lambda = Math.log(2) / T1_2;
+		let N = No * Math.exp(-lambda * t);
+
+		let tekstWyniku = "No=" + No.toFixed(2) + " [sztuk]<br>";
+		tekstWyniku += "t=" + t.toFixed(2) + " [lat]<br>";
+		tekstWyniku += "T1/2=" + T1_2.toFixed(2) + " [lat]<br>";
+		tekstWyniku += "Lambda=" + lambda.toFixed(7) + " [1/rok]<br>";
+		tekstWyniku += "N=" + N.toFixed(7) + " [sztuk]";
+
+		document.getElementById("wyniki").innerHTML = tekstWyniku;
+	</script>
+</body>
+
+</html>

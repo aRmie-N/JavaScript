@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod z23</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        pre {
+            background-color: rgb(223, 223, 223);
+            border-radius: 7px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kod do zadania 23</h1>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="stylesheet" href="styl.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;form&gt;
+        &lt;p&gt;Obliczanie odległośći od drabiny i kąta nachylenia drabiny&lt;/p&gt;
+        &lt;label for="D_pol"&gt;Podaj D= &lt;/label&gt;
+        &lt;input type="text" id="D_pol"&gt;
+        &lt;label for="X_pol"&gt;Podaj X= &lt;/label&gt;
+        &lt;input type="text" id="X_pol"&gt;&lt;br&gt;&lt;br&gt;
+        &lt;input type="button" value="Oblicz" onclick="oblicz()"&gt;&lt;br&gt;&lt;br&gt;
+
+        &lt;label for="drabina"&gt;Drabina =&lt;/label&gt;
+        &lt;input type="text" id="drabina" readonly&gt;
+
+        &lt;label for="alfa"&gt;Alfa =&lt;/label&gt;
+        &lt;input type="text" id="alfa" readonly&gt;
+    &lt;/form&gt;
+    &lt;script&gt;
+        function dlugosc(D_pol, X_pol) {
+            return Math.sqrt(D_pol * D_pol + X_pol * X_pol);
+        }
+
+        function kat(D_pol, X_pol) {
+            return Math.atan(D_pol / X_pol) * 180 / Math.PI;
+        }
+
+        function oblicz() {
+            let D_pol = parseFloat(document.querySelector("#D_pol").value);
+            let X_pol = parseFloat(document.querySelector("#X_pol").value);
+
+            let wynik_drabina = dlugosc(D_pol, X_pol);
+            let wynik_kat = kat(D_pol, X_pol);
+            document.querySelector("#drabina").value = wynik_drabina.toFixed(2);
+            document.querySelector("#alfa").value = wynik_kat.toFixed(2);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </code></pre>
+</body>
+
+</html>
+<!-- Mykhailo Polishchuk 2P 01.10.2026 -->
+<!-- Zadanie 23 -->

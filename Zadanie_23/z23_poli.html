@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <form>
+        <p>Obliczanie odległośći od drabiny i kąta nachylenia drabiny</p>
+        <label for="D_pol">Podaj D= </label>
+        <input type="text" id="D_pol">
+        <label for="X_pol">Podaj X= </label>
+        <input type="text" id="X_pol"><br><br>
+        <input type="button" value="Oblicz" onclick="oblicz()"><br><br>
+
+        <label for="drabina">Drabina =</label>
+        <input type="text" id="drabina" readonly>
+
+        <label for="alfa">Alfa =</label>
+        <input type="text" id="alfa" readonly>
+    </form>
+    <script>
+        function dlugosc(D_pol, X_pol) {
+            return Math.sqrt(D_pol * D_pol + X_pol * X_pol);
+        }
+
+        function kat(D_pol, X_pol) {
+            return Math.atan(D_pol / X_pol) * 180 / Math.PI;
+        }
+
+        function oblicz() {
+            let D_pol = parseFloat(document.querySelector("#D_pol").value);
+            let X_pol = parseFloat(document.querySelector("#X_pol").value);
+
+            let wynik_drabina = dlugosc(D_pol, X_pol);
+            let wynik_kat = kat(D_pol, X_pol);
+            document.querySelector("#drabina").value = wynik_drabina.toFixed(2);
+            document.querySelector("#alfa").value = wynik_kat.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

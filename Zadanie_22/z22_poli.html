@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+    <style>
+        #pole,
+        #obwod {
+            color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <p>Wprowadź dane:</p>
+        <input type="text" id="a_dana" placeholder="Wpisz bok a"><br>
+        <input type="text" id="b_dana" placeholder="Wpisz bok b"><br><br>
+        <input type="button" name="pole_obwod" value="Oblicz pole oraz obwód" onclick="pole_obwod()"><br><br><br>
+    </form>
+
+    <p id="pole"></p>
+    <p id="obwod"></p>
+    <script type="text/javascript">
+        function pole_obwod() {
+            pole_polishchuk();
+            obwod_polishchuk();
+        }
+        function pole_polishchuk() {
+            let a_dana_pol = parseFloat(document.querySelector("#a_dana").value);
+            let b_dana_pol = parseFloat(document.querySelector("#b_dana").value);
+            const p = document.querySelector("#pole");
+            p.textContent = "Pole prostokąta = " + a_dana_pol * b_dana_pol + " cm^2";
+        }
+        function obwod_polishchuk() {
+            let a_dana_pol = parseFloat(document.querySelector("#a_dana").value);
+            let b_dana_pol = parseFloat(document.querySelector("#b_dana").value);
+            const p = document.querySelector("#obwod");
+            p.textContent = "Obwod prostokąta = " + (a_dana_pol * 2 + b_dana_pol * 2) + " cm";
+        }
+    </script>
+</body>
+
+</html>

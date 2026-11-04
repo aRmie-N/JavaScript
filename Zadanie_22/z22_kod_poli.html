@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod z22</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        pre {
+            background-color: rgb(223, 223, 223);
+            border-radius: 7px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kod do zadania 22</h1>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="stylesheet" href="styl.css"&gt;
+    &lt;style&gt;
+        #pole, #obwod {
+            color: red;
+            font-size: 50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;p&gt;Wprowadź dane:&lt;/p&gt;
+    &lt;input type="text" id="a_dana" placeholder="Wpisz bok a"&gt;&lt;br&gt;
+    &lt;input type="text" id="b_dana" placeholder="Wpisz bok b"&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type="button" name="pole_obwod" value="Oblicz pole oraz obwód" onclick="pole_obwod()"&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;p id="pole"&gt;&lt;/p&gt;
+    &lt;p id="obwod"&gt;&lt;/p&gt;
+    &lt;script type="text/javascript"&gt;
+        function pole_obwod() {
+            pole_polishchuk();
+            obwod_polishchuk();
+        }
+        function pole_polishchuk() {
+            let a_dana_pol = parseFloat(document.querySelector("#a_dana").value);
+            let b_dana_pol = parseFloat(document.querySelector("#b_dana").value);
+            const p = document.querySelector("#pole");
+            p.textContent = "Pole prostokąta = " + a_dana_pol*b_dana_pol + " cm^2";
+        }
+        function obwod_polishchuk() {
+            let a_dana_pol = parseFloat(document.querySelector("#a_dana").value);
+            let b_dana_pol = parseFloat(document.querySelector("#b_dana").value);
+            const p = document.querySelector("#obwod");
+            p.textContent = "Obwod prostokąta = " + (a_dana_pol*2 + b_dana_pol*2) + " cm";
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </code></pre>
+</body>
+
+</html>
+<!-- Mykhailo Polishchuk 2P 01.10.2026 -->
+<!-- Zadanie 22 -->

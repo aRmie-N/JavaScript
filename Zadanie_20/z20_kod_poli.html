@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod z20</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        pre {
+            background-color: rgb(223, 223, 223);
+            border-radius: 7px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kod do zadania 20</h1>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="stylesheet" href="styl.css"&gt;
+    &lt;style&gt;
+        p {
+            color: red;
+            font-size: 50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Trójkąt&lt;/h1&gt;&lt;br&gt;&lt;br&gt;
+    Podaj współrzędne punktu A: &lt;br&gt;
+    &lt;input type="text" id="Ax" placeholder="podaj Ax"&gt;&lt;br&gt;
+    &lt;input type="text" id="Ay" placeholder="podaj Ay"&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+    Podaj współrzędne punktu B: &lt;br&gt;
+    &lt;input type="text" id="Bx" placeholder="podaj Bx"&gt;&lt;br&gt;
+    &lt;input type="text" id="By" placeholder="podaj By"&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+    Podaj współrzędne punktu C: &lt;br&gt;
+    &lt;input type="text" id="Cx" placeholder="podaj Cx"&gt;&lt;br&gt;
+    &lt;input type="text" id="Cy" placeholder="podaj Cy"&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;input type="button" name="boki" value="Oblicz wszystkie boki" onclick="boki()"&gt;&lt;br&gt;&lt;br&gt;
+
+
+    &lt;p id="komunikat_AB"&gt;&lt;/p&gt;
+    &lt;p id="komunikat_BC"&gt;&lt;/p&gt;
+    &lt;p id="komunikat_AC"&gt;&lt;/p&gt;
+    &lt;script type="text/javascript"&gt;
+        function boki() {
+            AB_pol();
+            BC_pol();
+            AC_pol();
+        }
+        function AB_pol() {
+            let Ax_pol = parseFloat(document.getElementById('Ax').value);
+            let Ay_pol = parseFloat(document.getElementById('Ay').value);
+            let Bx_pol = parseFloat(document.getElementById('Bx').value);
+            let By_pol = parseFloat(document.getElementById('By').value);
+            const p = document.getElementById("komunikat_AB");
+            p.textContent = "Długość boku AB = " + Math.sqrt(Math.pow((Ax_pol - Bx_pol), 2) + Math.pow((Ay_pol - By_pol), 2))
+        }
+        function BC_pol() {
+            let Bx_pol = parseFloat(document.getElementById('Bx').value);
+            let By_pol = parseFloat(document.getElementById('By').value);
+            let Cx_pol = parseFloat(document.getElementById('Cx').value);
+            let Cy_pol = parseFloat(document.getElementById('Cy').value);
+            const p = document.getElementById("komunikat_BC");
+            p.textContent = "Długość boku BC = " + Math.sqrt(Math.pow((Bx_pol - Cx_pol), 2) + Math.pow((By_pol - Cy_pol), 2))
+        }
+        function AC_pol() {
+            let Ax_pol = parseFloat(document.getElementById('Ax').value);
+            let Ay_pol = parseFloat(document.getElementById('Ay').value);
+            let Cx_pol = parseFloat(document.getElementById('Cx').value);
+            let Cy_pol = parseFloat(document.getElementById('Cy').value);
+            const p = document.getElementById("komunikat_AC");
+            p.textContent = "Długość boku AC = " + Math.sqrt(Math.pow((Ax_pol - Cx_pol), 2) + Math.pow((Ay_pol - Cy_pol), 2))
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </code></pre>
+</body>
+
+</html>
+<!-- Mykhailo Polishchuk 2P 01.10.2026 -->
+<!-- Zadanie 20 -->

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Zadanie 24</title>
+</head>
+
+<body>
+	<div id="wyniki"></div>
+
+	<script>
+		let x1_pol = parseFloat(prompt("Podaj x1 (w stopniach):", "30"));
+		let x2_pol = parseFloat(prompt("Podaj x2:", "2"));
+
+		let liczba_liter = 8;
+
+		let tekstWyniku = "wczytane liczby:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1=" + x1_pol + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2=" + x2_pol + "<br>";
+
+		let rad = (x1_pol * Math.PI) / 180;
+
+		tekstWyniku += "w stopniach x1=" + x1_pol + "&nbsp;[stopni]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1=" + rad.toFixed(2) + "&nbsp;[radianach]<br>";
+
+		let potega = liczba_liter / (liczba_liter + 2);
+		let y1 = 3 * Math.pow(x1_pol, potega);
+
+		let y2 = 2 * Math.cos(rad) + 3 * Math.sin(rad);
+
+		let pod_pierwiastkiem = Math.pow(x1_pol, 5) + 2 * Math.pow(x2_pol, 4) * Math.abs(x1_pol - x2_pol);
+		let y3 = Math.cbrt(pod_pierwiastkiem);
+
+		tekstWyniku += "y1 = " + y1.toFixed(2) + "<br>";
+		tekstWyniku += "y2 = " + y2.toFixed(2) + "<br>";
+		tekstWyniku += "y3 = " + y3.toFixed(2) + "<br>";
+
+		document.getElementById("wyniki").innerHTML = tekstWyniku;
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod z25</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        pre {
+            background-color: rgb(223, 223, 223);
+            border-radius: 7px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kod do zadania 25</h1>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Zadanie 25&lt;/title&gt;
+	&lt;style&gt;
+		#wyniki {
+			color: blue;
+			font-size: 32px;
+			line-height: 1.35;
+			padding: 12px;
+			border: 1px solid black;
+			width: fit-content;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+	&lt;div id="wyniki"&gt;&lt;/div&gt;
+
+	&lt;script&gt;
+		// Autor: Mykhailo Polishchuk
+		let No = parseFloat(prompt("Podaj poczatkowa liczbe atomow No [sztuk]:", "1"));
+		let t = parseFloat(prompt("Podaj czas t [lat]:", "1"));
+		let T1_2 = parseFloat(prompt("Podaj czas polowicznego rozpadu T1/2 [lat]:", "5700"));
+
+		let lambda = Math.log(2) / T1_2;
+		let N = No * Math.exp(-lambda * t);
+
+		let tekstWyniku = "No=" + No.toFixed(2) + " [sztuk]&lt;br&gt;";
+		tekstWyniku += "t=" + t.toFixed(2) + " [lat]&lt;br&gt;";
+		tekstWyniku += "T1/2=" + T1_2.toFixed(2) + " [lat]&lt;br&gt;";
+		tekstWyniku += "Lambda=" + lambda.toFixed(7) + " [1/rok]&lt;br&gt;";
+		tekstWyniku += "N=" + N.toFixed(7) + " [sztuk]";
+
+		document.getElementById("wyniki").innerHTML = tekstWyniku;
+	&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </code></pre>
+</body>
+
+</html>
+<!-- Mykhailo Polishchuk 2P 01.10.2026 -->
+<!-- Zadanie 25 -->
