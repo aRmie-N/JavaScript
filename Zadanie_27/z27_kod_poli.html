@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod do zadania 27</title>
+</head>
+<body>
+    <h1>Kod JavaScript - zadanie 27</h1>
+    <pre><code>function obliczWysokosc(droga, odlegloscPozioma) {
+    return Math.sqrt(droga ** 2 - odlegloscPozioma ** 2);
+}
+
+function obliczKatWznoszenia(droga, odlegloscPozioma) {
+    const katWRadianach = Math.acos(odlegloscPozioma / droga);
+    return katWRadianach * 180 / Math.PI;
+}
+
+// Wysokość wynika z twierdzenia Pitagorasa.
+// Funkcja acos zwraca kąt w radianach, dlatego przeliczamy go na stopnie.</code></pre>
+    <button type="button" onclick="window.close()">Zamknij okno</button>
+</body>
+</html>

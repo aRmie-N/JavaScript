@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod do zadania 26</title>
+</head>
+<body>
+    <h1>Kod JavaScript - zadanie 26</h1>
+    <pre><code>function poleTrapezu(a, b, h) {
+    return ((a + b) * h) / 2;
+}
+
+function obwodTrapezuRownoramiennego(a, b, h) {
+    const przesuniecie = Math.abs(a - b) / 2;
+    const ramie = Math.sqrt(przesuniecie ** 2 + h ** 2);
+    return a + b + 2 * ramie;
+}
+
+// Pole: (a + b) * h / 2
+// Obwód: a + b + 2 * sqrt(h^2 + ((a - b) / 2)^2)</code></pre>
+    <button type="button" onclick="window.close()">Zamknij okno</button>
+</body>
+</html>

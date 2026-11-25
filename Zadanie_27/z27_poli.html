@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 27 - samolot</title>
+</head>
+<body>
+    <h1>Wysokość i kąt wznoszenia samolotu</h1>
+    <form>
+        <label>Odległość pozioma [m]: <input type="number" id="odleglosc" min="0" step="any"></label><br><br>
+        <label>Droga samolotu [m]: <input type="number" id="droga" min="0" step="any"></label><br><br>
+        <button type="button" onclick="obliczWysokosc()">Oblicz wysokość</button>
+        <button type="button" onclick="obliczKat()">Oblicz kąt wznoszenia</button>
+    </form>
+    <p id="wynik" aria-live="polite"></p>
+    <button type="button" onclick="window.close()">Zamknij okno</button>
+    <script>
+        function pobierzBoki() {
+            const poziom = Number(document.getElementById("odleglosc").value);
+            const droga = Number(document.getElementById("droga").value);
+            if (!Number.isFinite(poziom) || !Number.isFinite(droga) || poziom < 0 || droga <= 0 || poziom > droga) {
+                document.getElementById("wynik").textContent = "Podaj poprawne wymiary: droga musi być dodatnia i nie mniejsza od odległości poziomej.";
+                return null;
+            }
+            return { poziom, droga };
+        }
+
+        function obliczWysokosc() {
+            const boki = pobierzBoki();
+            if (!boki) return;
+            const wysokosc = Math.sqrt(boki.droga ** 2 - boki.poziom ** 2);
+            document.getElementById("wynik").textContent = "Wysokość: " + wysokosc.toFixed(2) + " m";
+        }
+
+        function obliczKat() {
+            const boki = pobierzBoki();
+            if (!boki) return;
+            const radiany = Math.acos(boki.poziom / boki.droga);
+            const stopnie = radiany * 180 / Math.PI;
+            document.getElementById("wynik").textContent = "Kąt wznoszenia: " + stopnie.toFixed(2) + "°";
+        }
+    </script>
+</body>
+</html>

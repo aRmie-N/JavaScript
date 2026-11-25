@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 31 - nowe pole i metoda</title>
+    <style>
+        body { background: lightblue; font-family: "Times New Roman", serif; margin: 5px; }
+        #wynikGlowny { color: red; font-size: 51px; }
+        #opisObiektu { color: blue; font-size: 40px; }
+    </style>
+</head>
+<body>
+    <div id="wynikGlowny" aria-live="polite"></div>
+    <div id="opisObiektu"></div>
+    <button type="button" onclick="window.close()">Zamknij okno</button>
+    <script>
+        const wiezowiec = {
+            ile_pieter: 20,
+            wysokosc_m: 75,
+            liczba_lokali: 120,
+            wiezowiec_wyswietl_polishchuk_ucznia: function () {
+                return "Wieżowiec: " + this.ile_pieter + " pięter, " + this.wysokosc_m +
+                    " m, " + this.liczba_lokali + " lokali";
+            }
+        };
+
+        wiezowiec.wiek = 16;
+        wiezowiec.wiezowiec_pokaz_polishchuk_ucznia = function () {
+            alert("Wiek: " + this.wiek + " lat");
+        };
+
+        document.getElementById("wynikGlowny").innerHTML =
+            "Dane obiektu: Wieżowiec<br>Moje dane ==&gt; " + wiezowiec.wiezowiec_wyswietl_polishchuk_ucznia();
+        document.getElementById("opisObiektu").innerHTML =
+            "Mój numer w dzienniku to 15<br>Obiekt to Wieżowiec<br>Pola:<br>" +
+            "&nbsp;&nbsp;&nbsp;&nbsp;ile_pieter<br>&nbsp;&nbsp;&nbsp;&nbsp;wysokosc_m<br>" +
+            "&nbsp;&nbsp;&nbsp;&nbsp;liczba_lokali<br>Metoda: wiezowiec_wyswietl_polishchuk_ucznia();<br>" +
+            "==============================================<br>" +
+            "Nowe pole poza obiektem: wiek = " + wiezowiec.wiek + "<br>" +
+            "Nowa metoda poza obiektem: wiezowiec_pokaz_polishchuk_ucznia();";
+
+        wiezowiec.wiezowiec_pokaz_polishchuk_ucznia();
+    </script>
+</body>
+</html>

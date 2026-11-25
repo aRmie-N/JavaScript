@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 30 - programowanie obiektowe</title>
+    <style>
+        body { background: #ffff00; font-family: "Times New Roman", serif; margin: 5px; }
+        #wynikGlowny { color: green; font-size: 46px; }
+        #opisObiektu { color: blue; font-size: 35px; }
+    </style>
+</head>
+<body>
+    <div id="wynikGlowny" aria-live="polite"></div>
+    <div id="opisObiektu"></div>
+    <button type="button" onclick="window.close()">Zamknij okno</button>
+    <script>
+        const wiezowiec = {
+            ile_pieter: 20,
+            wysokosc_m: 75,
+            liczba_lokali: 120,
+            wiezowiec_wyswietl_polishchuk_ucznia: function () {
+                document.getElementById("wynikGlowny").innerHTML =
+                    "Dane obiektu: Wieżowiec<br>Moje dane ==&gt; Wieżowiec, " +
+                    this.ile_pieter + " pięter, " + this.wysokosc_m + " m, " + this.liczba_lokali + " lokali";
+                document.getElementById("opisObiektu").innerHTML =
+                    "Obiekt to Wieżowiec<br>Pola:<br>&nbsp;&nbsp;&nbsp;&nbsp;ile_pieter<br>" +
+                    "&nbsp;&nbsp;&nbsp;&nbsp;wysokosc_m<br>&nbsp;&nbsp;&nbsp;&nbsp;liczba_lokali<br>" +
+                    "Metoda:<br>&nbsp;&nbsp;&nbsp;&nbsp;wiezowiec_wyswietl_polishchuk_ucznia";
+            }
+        };
+
+        wiezowiec.wiezowiec_wyswietl_polishchuk_ucznia();
+    </script>
+</body>
+</html>

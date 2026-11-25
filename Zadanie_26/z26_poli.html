@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Zadanie 26 - trapez równoramienny</title>
+</head>
+
+<body>
+	<h1>Pole i obwód trapezu równoramiennego</h1>
+	<form>
+		<label>Górna podstawa a [cm]: <input type="number" id="podstawaA" min="0" step="any"></label><br><br>
+		<label>Dolna podstawa b [cm]: <input type="number" id="podstawaB" min="0" step="any"></label><br><br>
+		<label>Wysokość h [cm]: <input type="number" id="wysokosc" min="0" step="any"></label><br><br>
+		<button type="button" onclick="obliczPole()">Oblicz pole</button>
+		<button type="button" onclick="obliczObwod()">Oblicz obwód</button>
+	</form>
+	<p id="wynik" aria-live="polite"></p>
+	<button type="button" onclick="window.close()">Zamknij okno</button>
+
+	<script>
+		function pobierzDane() {
+			const a = Number(document.getElementById("podstawaA").value);
+			const b = Number(document.getElementById("podstawaB").value);
+			const h = Number(document.getElementById("wysokosc").value);
+			if (![a, b, h].every(Number.isFinite) || a <= 0 || b <= 0 || h <= 0) {
+				document.getElementById("wynik").textContent = "Wpisz dodatnie wartości wszystkich wymiarów.";
+				return null;
+			}
+			return { a, b, h };
+		}
+
+		function obliczPole() {
+			const dane = pobierzDane();
+			if (!dane) return;
+			const pole = ((dane.a + dane.b) * dane.h) / 2;
+			document.getElementById("wynik").textContent = "Pole trapezu: " + pole.toFixed(2) + " cm²";
+		}
+
+		function obliczObwod() {
+			const dane = pobierzDane();
+			if (!dane) return;
+			const przesuniecie = Math.abs(dane.a - dane.b) / 2;
+			const ramie = Math.sqrt(przesuniecie ** 2 + dane.h ** 2);
+			const obwod = dane.a + dane.b + 2 * ramie;
+			document.getElementById("wynik").textContent = "Obwód trapezu: " + obwod.toFixed(2) + " cm";
+		}
+	</script>
+</body>
+
+</html>

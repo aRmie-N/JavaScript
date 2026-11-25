@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 29 - obiekty w JavaScript</title>
+</head>
+<body>
+    <h1>Zadanie 29 - właściwości, metody i konstruktory</h1>
+    <ol>
+        <li>
+            <strong>W jaki sposób można ustawić właściwość obiektu?</strong>
+            <p>Notacją kropkową, np. <code>auto.marka = "Opel";</code>, albo nawiasową, np. <code>auto["marka"] = "Opel";</code>. Notacja nawiasowa pozwala też użyć nazwy właściwości zapisanej w zmiennej.</p>
+        </li>
+        <li>
+            <strong>Jak odwołać się do pól i metod?</strong>
+            <p>Podajemy obiekt i nazwę jego elementu, np. <code>auto.kolor</code> odczytuje właściwość, a <code>auto.opis()</code> wywołuje metodę.</p>
+        </li>
+        <li>
+            <strong>Jakie są cechy konstruktora?</strong>
+            <p>Jest używany do inicjalizacji nowego obiektu, może przyjmować argumenty i przypisywać ich wartości do pól. W JavaScript funkcja konstruktora jest wywoływana z operatorem <code>new</code>.</p>
+        </li>
+        <li>
+            <strong>Jak utworzyć obiekt z trzema polami i metodą?</strong>
+            <pre>const osoba = {
+    nazwisko: "Nowak",
+    imie: "Anna",
+    zawod: "lekarz",
+    wyswietl: function () {
+        return this.imie + " " + this.nazwisko;
+    }
+};</pre>
+        </li>
+        <li>
+            <strong>Co oznacza <code>this</code> i czym oddziela się elementy obiektu?</strong>
+            <p><code>this</code> odnosi się do obiektu, na którym działa metoda. W literałach obiektów właściwości i metody oddziela się przecinkami.</p>
+        </li>
+        <li>
+            <strong>Jak działa konstruktor w JavaScript?</strong>
+            <pre>function Klient(nazwisko, imie, zawod) {
+    this.nazwisko = nazwisko;
+    this.imie = imie;
+    this.zawod = zawod;
+}</pre>
+            <p>Wartości argumentów są przypisywane do pól nowego obiektu.</p>
+        </li>
+        <li>
+            <strong>Do czego służy słowo kluczowe <code>new</code>?</strong>
+            <pre>const klient1 = new Klient("Nowak", "Anna", "lekarz");
+const klient2 = new Klient("Kowalski", "Jan", "kierowca");</pre>
+            <p><code>new</code> tworzy nową instancję i uruchamia konstruktor.</p>
+        </li>
+        <li>
+            <strong>Do czego służy <code>prototype</code>?</strong>
+            <p>To obiekt, z którego instancje konstruktora mogą współdzielić metody i właściwości.</p>
+            <pre>Klient.prototype.piszDane = function () {
+    return this.imie + " " + this.nazwisko;
+};</pre>
+        </li>
+    </ol>
+    <button type="button" onclick="window.close()">Zamknij okno</button>
+</body>
+</html>

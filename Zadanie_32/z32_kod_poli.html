@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod do zadania 32</title>
+</head>
+<body>
+    <h1>Kod JavaScript - zadanie 32</h1>
+    <p>Numer w dzienniku: 15</p>
+    <pre><code>function Wiezowiec(ilePieter, wysokoscM, liczbaLokali) {
+    this.ile_pieter = ilePieter;
+    this.wysokosc_m = wysokoscM;
+    this.liczba_lokali = liczbaLokali;
+}
+
+Wiezowiec.prototype.wiezowiec_wyswietl_polishchuk_ucznia = function () {
+    return "Wieżowiec " + this.ile_pieter + " pięter, " + this.wysokosc_m +
+        " m wysokości, " + this.liczba_lokali + " lokali";
+};
+
+const wiezowiec1 = new Wiezowiec(20, 75, 120);
+const wiezowiec2 = new Wiezowiec(12, 42, 64);
+
+wiezowiec1.wiek = 16;
+wiezowiec1.wiezowiec_pokaz_polishchuk_ucznia = function () {
+    alert("Wiek: " + this.wiek + " lat");
+};
+
+document.getElementById("wynikGlowny").innerHTML =
+    "Myje nazwisko to POLISHCHUK, mam numer 15, a obiekt to Wieżowiec&lt;br&gt;" +
+    "wiezowiec1 =&amp;gt; " + wiezowiec1.wiezowiec_wyswietl_polishchuk_ucznia() + "&lt;br&gt;" +
+    "wiezowiec2 =&amp;gt; " + wiezowiec2.wiezowiec_wyswietl_polishchuk_ucznia();
+wiezowiec1.wiezowiec_pokaz_polishchuk_ucznia();</code></pre>
+    <button type="button" onclick="window.close()">Zamknij okno</button>
+</body>
+</html>

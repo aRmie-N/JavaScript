@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 32 - konstruktor i prototype</title>
+    <style>
+        body { background: #ffff00; font-family: "Times New Roman", serif; margin: 5px; }
+        #wynikGlowny { color: green; font-size: 50px; }
+        #opisObiektow { color: blue; font-size: 35px; }
+    </style>
+</head>
+<body>
+    <div id="wynikGlowny" aria-live="polite"></div>
+    <div id="opisObiektow"></div>
+    <button type="button" onclick="window.close()">Zamknij okno</button>
+    <script>
+        function Wiezowiec(ilePieter, wysokoscM, liczbaLokali) {
+            this.ile_pieter = ilePieter;
+            this.wysokosc_m = wysokoscM;
+            this.liczba_lokali = liczbaLokali;
+        }
+
+        Wiezowiec.prototype.wiezowiec_wyswietl_polishchuk_ucznia = function () {
+            return "Wieżowiec " + this.ile_pieter + " pięter, " + this.wysokosc_m +
+                " m wysokości, " + this.liczba_lokali + " lokali";
+        };
+
+        const wiezowiec1 = new Wiezowiec(20, 75, 120);
+        const wiezowiec2 = new Wiezowiec(12, 42, 64);
+
+        wiezowiec1.wiek = 16;
+        wiezowiec1.wiezowiec_pokaz_polishchuk_ucznia = function () {
+            alert("Wiek: " + this.wiek + " lat");
+        };
+
+        document.getElementById("wynikGlowny").innerHTML =
+            "Moje nazwisko to POLISHCHUK, mam numer 15, a obiekt to Wieżowiec<br>" +
+            "Dostęp do pól wiezowiec1 i wiezowiec2, czyli wyświetlenie danych:<br>" +
+            "wiezowiec1 =&gt; " + wiezowiec1.wiezowiec_wyswietl_polishchuk_ucznia() + "<br>" +
+            "wiezowiec2 =&gt; " + wiezowiec2.wiezowiec_wyswietl_polishchuk_ucznia();
+        document.getElementById("opisObiektow").innerHTML =
+            "Programowanie obiektowe:<br>" +
+            "Prototype dodaje wspólną metodę do konstruktora, więc oba obiekty mogą jej używać.<br>" +
+            "Nowe pole obiektu wiezowiec1: wiek = " + wiezowiec1.wiek + "<br>" +
+            "Nowa metoda poza konstruktorem: wiezowiec_pokaz_polishchuk_ucznia();<br>" +
+            "Słowo new tworzy instancję i przekazuje wartości pól do konstruktora.";
+
+        wiezowiec1.wiezowiec_pokaz_polishchuk_ucznia();
+    </script>
+</body>
+</html>

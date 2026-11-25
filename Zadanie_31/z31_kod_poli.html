@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod do zadania 31</title>
+</head>
+<body>
+    <h1>Kod JavaScript - zadanie 31</h1>
+    <p>Numer w dzienniku: 15</p>
+    <pre><code>const wiezowiec = {
+    ile_pieter: 20,
+    wysokosc_m: 75,
+    liczba_lokali: 120,
+    wiezowiec_wyswietl_polishchuk_ucznia: function () {
+        return "Wieżowiec: " + this.ile_pieter + " pięter, " + this.wysokosc_m +
+            " m, " + this.liczba_lokali + " lokali";
+    }
+};
+
+wiezowiec.wiek = 16;
+wiezowiec.wiezowiec_pokaz_polishchuk_ucznia = function () {
+    alert("Wiek: " + this.wiek + " lat");
+};
+
+document.getElementById("wynikGlowny").innerHTML = "Dane obiektu: Wieżowiec&lt;br&gt;" +
+    "Moje dane =&amp;gt; " + wiezowiec.wiezowiec_wyswietl_polishchuk_ucznia();
+wiezowiec.wiezowiec_pokaz_polishchuk_ucznia();</code></pre>
+    <button type="button" onclick="window.close()">Zamknij okno</button>
+</body>
+</html>
