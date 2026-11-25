@@ -2,21 +2,66 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Kod do zadania 27</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod z27</title>
+    <style>
+        body { padding: 30px; }
+        pre { background-color: rgb(223, 223, 223); border-radius: 7px; padding: 5px; }
+    </style>
 </head>
 <body>
-    <h1>Kod JavaScript - zadanie 27</h1>
-    <pre><code>function obliczWysokosc(droga, odlegloscPozioma) {
-    return Math.sqrt(droga ** 2 - odlegloscPozioma ** 2);
-}
+    <h1>Kod do zadania 27</h1>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
 
-function obliczKatWznoszenia(droga, odlegloscPozioma) {
-    const katWRadianach = Math.acos(odlegloscPozioma / droga);
-    return katWRadianach * 180 / Math.PI;
-}
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Zadanie 27 - samolot&lt;/title&gt;
+&lt;/head&gt;
 
-// Wysokość wynika z twierdzenia Pitagorasa.
-// Funkcja acos zwraca kąt w radianach, dlatego przeliczamy go na stopnie.</code></pre>
+&lt;body&gt;
+    &lt;h1&gt;Wysokość i kąt wznoszenia samolotu&lt;/h1&gt;
+    &lt;form&gt;
+        &lt;label&gt;Odległość pozioma [m]: &lt;input type="number" id="odleglosc" min="0" step="any"&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+        &lt;label&gt;Droga samolotu [m]: &lt;input type="number" id="droga" min="0" step="any"&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+        &lt;button type="button" onclick="obliczWysokosc()"&gt;Oblicz wysokość&lt;/button&gt;
+        &lt;button type="button" onclick="obliczKat()"&gt;Oblicz kąt wznoszenia&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;p id="wynik" aria-live="polite"&gt;&lt;/p&gt;
+    &lt;button type="button" onclick="window.close()"&gt;Zamknij okno&lt;/button&gt;
+    &lt;script&gt;
+        function pobierzBoki() {
+            const poziom = Number(document.getElementById("odleglosc").value);
+            const droga = Number(document.getElementById("droga").value);
+            if (!Number.isFinite(poziom) || !Number.isFinite(droga) || poziom &lt; 0 || droga &lt;= 0 || poziom &gt; droga) {
+                document.getElementById("wynik").textContent = "Podaj poprawne wymiary: droga musi być dodatnia i nie mniejsza od odległości poziomej.";
+                return null;
+            }
+            return { poziom, droga };
+        }
+
+        function obliczWysokosc() {
+            const boki = pobierzBoki();
+            if (!boki) return;
+            const wysokosc = Math.sqrt(boki.droga ** 2 - boki.poziom ** 2);
+            document.getElementById("wynik").textContent = "Wysokość: " + wysokosc.toFixed(2) + " m";
+        }
+
+        function obliczKat() {
+            const boki = pobierzBoki();
+            if (!boki) return;
+            const radiany = Math.acos(boki.poziom / boki.droga);
+            const stopnie = radiany * 180 / Math.PI;
+            document.getElementById("wynik").textContent = "Kąt wznoszenia: " + stopnie.toFixed(2) + "°";
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </code></pre>
     <button type="button" onclick="window.close()">Zamknij okno</button>
 </body>
 </html>
+<!-- Mykhailo Polishchuk 2P 26.11.2026 -->
+<!-- Zadanie 27 -->

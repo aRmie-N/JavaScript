@@ -2,26 +2,54 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Kod do zadania 30</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod z30</title>
+    <style>
+        body { padding: 30px; }
+        pre { background-color: rgb(223, 223, 223); border-radius: 7px; padding: 5px; }
+    </style>
 </head>
 <body>
-    <h1>Kod JavaScript - zadanie 30</h1>
-    <p>Numer w dzienniku: 15</p>
-    <pre><code>const wiezowiec = {
-    ile_pieter: 20,
-    wysokosc_m: 75,
-    liczba_lokali: 120,
-    wiezowiec_wyswietl_polishchuk_ucznia: function () {
-        document.getElementById("wynikGlowny").innerHTML =
-            "Dane obiektu: Wieżowiec&lt;br&gt;Moje dane =&amp;gt; Wieżowiec, " +
-            this.ile_pieter + " pięter, " + this.wysokosc_m + " m, " + this.liczba_lokali + " lokali";
-        document.getElementById("opisObiektu").innerHTML =
-            "Obiekt to Wieżowiec&lt;br&gt;Pola: ile_pieter, wysokosc_m, liczba_lokali&lt;br&gt;" +
-            "Metoda: wiezowiec_wyswietl_polishchuk_ucznia";
-    }
-};
+    <h1>Kod do zadania 30</h1>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Zadanie 30 - programowanie obiektowe&lt;/title&gt;
+    &lt;style&gt;
+        body { background: #ffff00; font-family: "Times New Roman", serif; margin: 5px; }
+        #wynikGlowny { color: green; font-size: 46px; }
+        #opisObiektu { color: blue; font-size: 35px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="wynikGlowny" aria-live="polite"&gt;&lt;/div&gt;
+    &lt;div id="opisObiektu"&gt;&lt;/div&gt;
+    &lt;button type="button" onclick="window.close()"&gt;Zamknij okno&lt;/button&gt;
+    &lt;script&gt;
+        const wiezowiec = {
+            ile_pieter: 20,
+            wysokosc_m: 75,
+            liczba_lokali: 120,
+            wiezowiec_wyswietl_polishchuk_ucznia: function () {
+                document.getElementById("wynikGlowny").innerHTML =
+                    "Dane obiektu: Wieżowiec&lt;br&gt;Moje dane =&amp;gt; Wieżowiec, " +
+                    this.ile_pieter + " pięter, " + this.wysokosc_m + " m, " + this.liczba_lokali + " lokali";
+                document.getElementById("opisObiektu").innerHTML =
+                    "Obiekt to Wieżowiec&lt;br&gt;Pola:&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ile_pieter&lt;br&gt;" +
+                    "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;wysokosc_m&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;liczba_lokali&lt;br&gt;" +
+                    "Metoda:&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;wiezowiec_wyswietl_polishchuk_ucznia";
+            }
+        };
 
-wiezowiec.wiezowiec_wyswietl_polishchuk_ucznia();</code></pre>
+        wiezowiec.wiezowiec_wyswietl_polishchuk_ucznia();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
     <button type="button" onclick="window.close()">Zamknij okno</button>
 </body>
 </html>
+<!-- Mykhailo Polishchuk 2P 26.11.2026 -->
+<!-- Zadanie 30 -->

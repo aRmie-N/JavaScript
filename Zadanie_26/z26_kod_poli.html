@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
-    <title>Kod do zadania 26</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kod z26</title>
+    <style>
+        body { padding: 30px; }
+        pre { background-color: rgb(223, 223, 223); border-radius: 7px; padding: 5px; }
+    </style>
 </head>
+
 <body>
-    <h1>Kod JavaScript - zadanie 26</h1>
-    <pre><code>function poleTrapezu(a, b, h) {
-    return ((a + b) * h) / 2;
-}
-
-function obwodTrapezuRownoramiennego(a, b, h) {
-    const przesuniecie = Math.abs(a - b) / 2;
-    const ramie = Math.sqrt(przesuniecie ** 2 + h ** 2);
-    return a + b + 2 * ramie;
-}
-
-// Pole: (a + b) * h / 2
-// Obwód: a + b + 2 * sqrt(h^2 + ((a - b) / 2)^2)</code></pre>
-    <button type="button" onclick="window.close()">Zamknij okno</button>
+    <h1>Kod do zadania 26</h1>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Zadanie 26 - trapez równoramienny&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Pole i obwód trapezu równoramiennego&lt;/h1&gt;
+    &lt;form&gt;
+        &lt;label&gt;Górna podstawa a [cm]: &lt;input type="number" id="podstawaA" min="0" step="any"&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+        &lt;label&gt;Dolna podstawa b [cm]: &lt;input type="number" id="podstawaB" min="0" step="any"&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+        &lt;label&gt;Wysokość h [cm]: &lt;input type="number" id="wysokosc" min="0" step="any"&gt;&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+        &lt;button type="button" onclick="obliczPole()"&gt;Oblicz pole&lt;/button&gt;
+        &lt;button type="button" onclick="obliczObwod()"&gt;Oblicz obwód&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;p id="wynik" aria-live="polite"&gt;&lt;/p&gt;
+    &lt;button type="button" onclick="window.close()"&gt;Zamknij okno&lt;/button&gt;
+    &lt;script&gt;
+        function pobierzDane() {
+            const a = Number(document.getElementById("podstawaA").value);
+            const b = Number(document.getElementById("podstawaB").value);
+            const h = Number(document.getElementById("wysokosc").value);
+            if (![a, b, h].every(Number.isFinite) || a &lt;= 0 || b &lt;= 0 || h &lt;= 0) {
+                document.getElementById("wynik").textContent = "Wpisz dodatnie wartości wszystkich wymiarów.";
+                return null;
+            }
+            return { a, b, h };
+        }
+        function obliczPole() {
+            const dane = pobierzDane();
+            if (!dane) return;
+            const pole = ((dane.a + dane.b) * dane.h) / 2;
+            document.getElementById("wynik").textContent = "Pole trapezu: " + pole.toFixed(2) + " cm²";
+        }
+        function obliczObwod() {
+            const dane = pobierzDane();
+            if (!dane) return;
+            const przesuniecie = Math.abs(dane.a - dane.b) / 2;
+            const ramie = Math.sqrt(przesuniecie ** 2 + dane.h ** 2);
+            const obwod = dane.a + dane.b + 2 * ramie;
+            document.getElementById("wynik").textContent = "Obwód trapezu: " + obwod.toFixed(2) + " cm";
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+    <button type="button" onclick="window.close()">zamknij okno</button>
 </body>
+
 </html>
+<!-- Mykhailo Polishchuk 2P 26.11.2026 -->
+<!-- Zadanie 26 -->
