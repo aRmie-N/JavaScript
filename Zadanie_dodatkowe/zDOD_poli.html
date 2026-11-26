@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie_dod Losowanie</title>
+    <style>
+        p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Wygeneruję losową liczbę w przedziale od 1 do 100, spróbuj ją odgadnąć za jak najmniejszą liczbę prób</p>
+    <form>
+        <label for="wpisz">Wpisz liczbę</label>
+        <input type="text" id="wpisz">
+        <input type="button" id="zgadnij" value="Zgadnij" onclick="zgadnij()">
+        <p id="odpowiedz"></p>
+    </form>
+    <script>
+        function zgadnij() {
+            let aComputer = parseFloat(Math.random() * 100).value;
+            let aUser = parseFloat(document.querySelector("#wpisz").value);
+            let licznik = 0;
+
+            const p = document.querySelector("#odpowiedz");
+
+            do {
+                if (aUser < aComputer) {
+                    p.textContent = "Za mała, spóbuj jeszcze raz <br>liczba prób:" + licznik;
+                }
+                else if (aUser > aComputer) {
+                    p.textContent = "Za duża, spóbuj jeszcze raz <br>liczba prób:" + licznik;
+                }
+                else {
+                    p.textContent = "Gratulacje, zgadłeś liczbę! <br>Moja liczba:" + aComputer + "<br>Liczba prób" + licznik;
+                }
+                licznik++;
+            } while (aUser != aComputer);
+        }
+    </script>
+</body>
+
+</html>
